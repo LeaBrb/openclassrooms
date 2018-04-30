@@ -1,0 +1,251 @@
+/*
+    GENERAL
+*/
+
+body{
+    background: url('img/fond-texture.jpg') no-repeat center;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover;
+    margin:0;
+    padding:0;
+    height:100%;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+}
+
+.container, .wrapper{
+    display: flex;
+}
+
+.wrapper{
+    height: 100%;
+}
+
+h1, h3{
+    font-family: 'Amatic SC';
+}
+
+
+/*
+    ASIDE   
+*/
+
+aside{
+    background-color: rgba(0,0,0,0.2);
+    color: #fff;
+    max-width: 12%;
+    flex-direction: column;
+    padding:0% 1.5%;
+    height:100vh;
+}
+
+aside img{
+    border-radius: 50%;
+    width: 60%;
+    margin: 50% 20% 0 20%;
+}
+
+aside .social-medias{
+    border-top: 1px dotted #fff;
+    border-bottom: 1px dotted #fff;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+aside .social-medias a {
+    color: #fff;
+    opacity: 0.7;
+    padding: 0 0.5em;
+}
+
+aside .social-medias a:hover{
+    opacity: 1;
+}
+
+aside .citation{
+    font-style: italic;
+    font-size:0.9em;
+    padding-top: 10%;
+    text-align: center;
+}
+
+aside .contact{
+    border-top: 1px dotted #fff;
+    padding-top: 1em;
+}
+
+aside .contact p{
+    text-align: center;
+    margin: 0;
+}
+
+aside .contact ul{
+    padding-left: 0;
+    text-align: center;
+}
+
+aside .contact li{
+    list-style: none;
+    font-size: 0.9em;
+    line-height: 2;
+}
+
+aside .contact i{
+    color: #fff;
+    opacity: 0.7;
+    padding-right: 0.8em;
+}
+
+
+/*
+    CONTENT HEADER
+*/
+header{
+    margin-top: 4%;
+}
+
+header .container{
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+header .row{
+    margin: auto;
+}
+
+header .txt{
+    text-align: center;
+    color: #fff;
+    line-height: 0.8;
+}
+
+header .txt h1{
+    font-size: 3.5em;
+}
+
+header .txt h3{
+    font-size: 2em;
+}
+
+
+/*
+    CONTENT MAIN
+*/
+.main{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.main section .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.main article{
+     width: 28%;
+     margin: 5% 2.5% 5% 2.5%;
+     background-color: #fff;
+     padding:2%;
+     box-shadow: inset 0px 0px 1px rgba(0,0,0,0.15), 
+                 0px 2px 3px 0px rgba(0,0,0,0.1);
+}
+
+.main article .fas{
+    font-size: 4.5em;
+    color:#EA8A95;
+    width: 20%;
+    margin: 6% 40%;
+}
+
+.main article h2{
+    text-align: center;
+    margin-top: 0.2em;
+    margin-bottom: 1.3em;
+}
+
+.main article li{
+    padding: 2% 0;
+}
+
+/*
+    RESPONSIVE LAPTOP
+*/
+@media screen and (max-width: 1390px){
+    aside{
+        font-size:0.9em;
+    }
+    .main article .fas{
+        font-size: 4em;
+        margin: 6 38%;
+    }
+    .main article h2{
+        margin-top: 0.2em;
+        margin-bottom: 1.1em;
+        font-size:1.3em;
+    }
+    .main article li{
+        font-size: 0.9em;
+    }
+    .main article ul{
+        padding-left: 30px;
+    }    
+}
+
+@media screen and (min-width:1024px) and (max-width:1250px){
+    aside{
+        font-size:0.72em;
+        height:105vh;
+    }
+    .main article{
+        font-size: 0.9em;
+     } 
+    .main article .fas{
+        font-size: 3.8em;
+        margin: 6% 37%;
+    }
+}
+
+/*
+    RESPONSIVE TABLETTE & MOBILE
+*/
+
+@media screen and (max-width:1024px){
+    header .txt h1{
+        font-size: 4em;
+    }
+    header .txt h3{
+        font-size: 2.5em;
+    }
+    aside{
+        display: none;
+    }
+    .main{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .main section{
+        flex-direction: column;
+    }
+    .main article{
+        width: 86%;
+        margin: 5%;
+        font-size: 1.3em;
+        text-align: center;
+    }
+    .main article:last-child{
+        margin-bottom: 10%;
+    }
+    .main article .fas{
+        font-size: 4.5em;
+        margin: 3.5% 41%;
+    }
+    .main article h2{
+        margin-bottom: 1.2em;
+    }
+
+    .main article ul{
+        list-style: none;
+        padding-left: 0;
+    }
+}
